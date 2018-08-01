@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rename Notebook</title>
+</head>
+<body>
+    <form action="" id="form">
+        <label for="name">New notebook name</label>
+        <input name="name" id="name" type="text">
+        <input type="submit" value="确定">
+    </form>
+    <script>
+        const { ipcRenderer} = require('electron');
+
+        let form = document.getElementById('form');
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+
+            const name = form.querySelector('#name').value;
+            ipcRenderer.send('get-notebook-new-name', {name: name});
+            
+            window.close();
+        });
+    </script>
+</body>
+</html>

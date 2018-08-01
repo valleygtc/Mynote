@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+/* layout */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#notebooks-bar {
+    height: 5%;
+    position: sticky;
+}
+
+#page-container {
+    width: 80%;
+    height: 95%;
+    float: left;
+}
+
+#sections-bar {
+    width: 20%;
+    height: 95%;
+    float: right;
+}
+
+#page-container textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: none;
+    padding: 4px;
+}
+
+/* notebooks栏 */
+#notebooks-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#notebooks-bar ul li {
+    float: left;
+    border-left:1px solid #bbb;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 15px;
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    user-select: none;
+    /*position: absolute;
+    bottom: 0px;*/
+}
+
+.notebook:hover:not(.active) {
+    background-color: #111;
+}
+
+.notebook.active {
+    background-color: #4CAF50;
+}
+
+.notebook.dragging {
+    opacity: 0.4;
+}
+
+.notebook.dragover {
+    border-left: 1px dashed #000;
+}
+
+/* sections栏 */
+
+#sections-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+.section {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    user-select: none;
+}
+
+.section:hover {
+    background-color: #555;
+    color: white;
+}
+
+#dragbar {
+    background-color: black;
+    float: left;
+    height: 100%;
+    width: 3px;
+    cursor: col-resize;
+}
+
+.section.active {
+    background-color: #4CAF50;
+}
+
+#sections-bar .subsection-box {
+    padding: 16px;
+}
+
+.notebook.dragging {
+    opacity: 0.4;
+}
+
+.section.dragover {
+    border-top: 2px dashed #000;
+}

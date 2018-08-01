@@ -1,0 +1,25 @@
+{
+  "name": "mynote",
+  "version": "0.0.1",
+  "description": "A Notebook application like CherryTree",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "keywords": [
+    "Notebook",
+    "Electron",
+    "Hierarchy",
+    "Markdown"
+  ],
+  "author": "valleygtc",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^2.0.2",
+    "electron-rebuild": "^1.7.3"
+  },
+  "dependencies": {
+    "sqlite3": "^4.0.0"
+  }
+}
